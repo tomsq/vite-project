@@ -5,9 +5,9 @@ defineProps<{ msg: string }>()
 
 const redirect = async () => {
   
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
+  
   const link = window.open('','_blank');
+  await new Promise((resolve) => setTimeout(resolve, 1000));
  
   if(link)
     link.location = "https://google.com"; 
