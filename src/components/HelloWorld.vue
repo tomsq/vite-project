@@ -5,9 +5,13 @@ defineProps<{ msg: string }>()
 
 const redirect = async () => {
   
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   const link = window.open('','_blank');
-  await new Promise(() => setTimeout(() => {(link as any).location = "https://google.com"}, 555));
  
+  if(link)
+    link.location = "https://google.com"; 
+
 }
 </script>
 
